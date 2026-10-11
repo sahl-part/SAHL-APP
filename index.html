@@ -7,8 +7,20 @@
 
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,Tahoma,sans-serif;background:#f5f7fa;color:#101828}
-.app{max-width:480px;min-height:100vh;margin:auto;background:#fff;position:relative;padding-bottom:78px}
+body{
+  margin:0;
+  font-family:Arial,Tahoma,sans-serif;
+  background:#f5f7fa;
+  color:#101828;
+}
+.app{
+  max-width:480px;
+  min-height:100vh;
+  margin:auto;
+  background:#fff;
+  position:relative;
+  padding-bottom:78px;
+}
 .page{display:none;padding:22px 20px}
 .page.active{display:block}
 .logo{text-align:center;color:#075eae;margin:20px 0}
@@ -16,450 +28,575 @@ body{margin:0;font-family:Arial,Tahoma,sans-serif;background:#f5f7fa;color:#1018
 .logo-en{font-size:20px;letter-spacing:6px;font-weight:700;margin-top:12px}
 .tagline{text-align:center;font-size:19px;font-weight:700;margin-bottom:22px}
 .lang{font-size:14px;color:#667085;margin-bottom:25px}
-.hero-img{height:220px;background:linear-gradient(#eef6fc,#fff);border-radius:20px;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.hero-img img{width:95%;max-height:210px;object-fit:contain}
-.brands{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:18px 0}
-.brand{border:1px solid #e2e5ea;border-radius:14px;padding:13px 5px;text-align:center;font-weight:700;background:#fff}
+.hero-img{
+  height:220px;
+  background:linear-gradient(#eef6fc,#fff);
+  border-radius:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.hero-img img{
+  width:95%;
+  max-height:210px;
+  object-fit:contain;
+}
+.tahoe-fallback{font-size:100px}
+.brands{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:9px;
+  margin:18px 0;
+}
+.brand{
+  border:1px solid #e2e5ea;
+  border-radius:14px;
+  padding:13px 5px;
+  text-align:center;
+  font-weight:700;
+  background:#fff;
+}
 .brand b{display:block;color:#0873c8;font-size:18px}
-.btn{width:100%;border:0;border-radius:9px;background:#0878d8;color:#fff;font-size:18px;font-weight:700;padding:15px}
-.btn-outline{width:100%;border:1px solid #0878d8;border-radius:9px;background:#fff;color:#0878d8;font-size:16px;padding:12px}
-.title{text-align:center;font-size:21px;font-weight:800;margin:5px 0 22px}
-.back{color:#0878d8;font-size:16px;margin-bottom:15px}
-.steps{display:flex;justify-content:center;gap:16px;margin-bottom:22px;direction:ltr}
-.step{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#edf0f5;color:#697586;font-weight:700}
-.step.on{background:#0878d8;color:#fff}
+.btn{
+  width:100%;
+  border:0;
+  border-radius:9px;
+  background:#0878d8;
+  color:#fff;
+  font-size:18px;
+  font-weight:700;
+  padding:15px;
+  cursor:pointer;
+}
+.btn-outline{
+  width:100%;
+  border:1px solid #0878d8;
+  border-radius:9px;
+  background:#fff;
+  color:#0878d8;
+  font-size:16px;
+  padding:12px;
+}
+.title{
+  text-align:center;
+  font-size:21px;
+  font-weight:800;
+  margin:5px 0 22px;
+}
+.back{
+  color:#0878d8;
+  font-size:16px;
+  cursor:pointer;
+  margin-bottom:15px;
+}
+.steps{
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  margin-bottom:22px;
+  direction:ltr;
+}
+.step{
+  width:32px;height:32px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:#edf0f5;color:#697586;font-weight:700;
+}
+.step.on{background:#0878d8;color:white}
 label{display:block;font-weight:700;margin:14px 0 7px}
-input,select,textarea{width:100%;padding:13px;border:1px solid #d7dce4;border-radius:8px;font-size:16px;background:#fff}
-.camera{border:2px dashed #b9c9d8;border-radius:14px;height:110px;display:flex;align-items:center;justify-content:center;text-align:center;color:#667085;margin:14px 0}
+input,select,textarea{
+  width:100%;
+  padding:13px;
+  border:1px solid #d7dce4;
+  border-radius:8px;
+  font-size:16px;
+  background:#fff;
+}
+.camera{
+  border:2px dashed #b9c9d8;
+  border-radius:14px;
+  height:110px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#667085;
+  margin:14px 0;
+  cursor:pointer;
+}
 .divider{text-align:center;color:#667085;margin:16px 0}
 .car-card{text-align:center}
+.car-card img{width:75%;max-height:170px;object-fit:contain}
 .car-name{font-size:20px;font-weight:800;margin:7px}
 .muted{color:#667085;font-size:13px}
-.categories{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:15px}
-.category{border:1px solid #e2e5ea;border-radius:10px;padding:14px 5px;text-align:center;background:#fff}
+.categories{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:9px;
+  margin-top:15px;
+}
+.category{
+  border:1px solid #e2e5ea;
+  border-radius:10px;
+  padding:14px 5px;
+  text-align:center;
+  background:white;
+  cursor:pointer;
+}
 .category span{font-size:27px;display:block;margin-bottom:6px}
+.search{
+  position:relative;
+  margin-bottom:12px;
+}
 .tabs{display:flex;gap:7px;margin:10px 0 15px}
-.tab{flex:1;text-align:center;padding:8px 3px;background:#f1f3f6;border-radius:7px;font-size:12px}
-.tab.active{background:#0878d8;color:#fff}
-.card{border:1px solid #e5e8ed;box-shadow:0 3px 12px rgba(0,0,0,.05);border-radius:11px;padding:12px;margin:10px 0;background:#fff}
-.product{display:flex;align-items:center;gap:12px}
+.tab{
+  flex:1;text-align:center;padding:8px 3px;
+  background:#f1f3f6;border-radius:7px;font-size:12px;
+}
+.tab.active{background:#0878d8;color:white}
+.card{
+  border:1px solid #e5e8ed;
+  box-shadow:0 3px 12px rgba(0,0,0,.05);
+  border-radius:11px;
+  padding:12px;
+  margin:10px 0;
+  background:white;
+}
+.product{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.product-img{
+  width:80px;height:90px;
+  object-fit:contain;
+}
 .product-info{flex:1}
 .product-name{font-weight:800}
 .price{font-size:19px;font-weight:800;margin-top:5px}
-.badge{display:inline-block;padding:4px 7px;border-radius:12px;font-size:11px;margin-top:4px;background:#dff6f4;color:#087d77}
+.badge{
+  display:inline-block;
+  padding:4px 7px;
+  border-radius:12px;
+  font-size:11px;
+  margin-top:4px;
+  background:#dff6f4;color:#087d77;
+}
 .badge.orange{background:#fff0d9;color:#9c5d00}
 .badge.gray{background:#e9efed;color:#46645d}
-.supplier{display:flex;align-items:center;gap:10px}
+.big-product{text-align:center}
+.big-product img{width:70%;height:240px;object-fit:contain}
+.dots{text-align:center;color:#0878d8;letter-spacing:5px}
+.supplier{
+  display:flex;align-items:center;gap:10px
+}
 .supplier-icon{font-size:32px}
 .radio{margin-right:auto;width:20px;height:20px}
-.shipping{display:flex;gap:12px;align-items:center}
+.shipping{
+  display:flex;gap:12px;align-items:center
+}
 .shipping-icon{font-size:28px}
-.review-row{display:flex;justify-content:space-between;border-bottom:1px solid #eee;padding:10px 0;font-size:14px}
+.review-row{
+  display:flex;
+  justify-content:space-between;
+  border-bottom:1px solid #eee;
+  padding:10px 0;
+  font-size:14px;
+}
 .total{font-size:18px;font-weight:800}
-.payment-methods{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:18px}
-.pay{border:1px solid #ddd;border-radius:8px;padding:12px 4px;text-align:center;font-size:13px}
+.payment-methods{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:18px
+}
+.pay{
+  border:1px solid #ddd;border-radius:8px;padding:12px 4px;text-align:center;font-size:13px
+}
 .pay.selected{border:2px solid #0878d8;background:#f3f9ff}
 .success{text-align:center;margin:25px 0}
-.check{width:54px;height:54px;border-radius:50%;background:#13aa67;color:#fff;display:flex;align-items:center;justify-content:center;margin:auto;font-size:30px}
-.timeline{display:flex;justify-content:space-between;margin:22px 0;font-size:10px;text-align:center}
-.timeline div{flex:1}
-.timeline b{display:block;width:24px;height:24px;border-radius:50%;background:#e5e7eb;margin:auto auto 5px;padding-top:6px}
-.timeline .current b{background:#0878d8;color:#fff}
-.notice{background:#f3ecff;border-radius:9px;padding:13px;font-size:13px;margin:18px 0}
+.check{
+  width:54px;height:54px;border-radius:50%;background:#13aa67;
+  color:white;display:flex;align-items:center;justify-content:center;
+  margin:auto;font-size:30px
+}
+.timeline{
+  display:flex;justify-content:space-between;margin:22px 0;font-size:10px;text-align:center
+}
+.timeline div{flex:1;position:relative}
+.timeline b{
+  display:block;width:24px;height:24px;border-radius:50%;
+  background:#e5e7eb;margin:auto auto 5px;padding-top:6px
+}
+.timeline .current b{background:#0878d8;color:white}
+.notice{
+  background:#f3ecff;border-radius:9px;padding:13px;font-size:13px;margin:18px 0
+}
 .approval{display:flex;gap:8px}
 .approve{background:#13aa67}
-.reject{background:#fff0f0;color:#d42d2d}
-.bottom{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(480px,100%);height:70px;background:#fff;border-top:1px solid #e5e7eb;display:flex;justify-content:space-around;align-items:center;z-index:10}
-.nav{text-align:center;font-size:12px;color:#344054}
+.reject{background:#fff0f0;color:#d42d2d;border:0}
+.bottom{
+  position:fixed;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:min(480px,100%);
+  height:70px;
+  background:#fff;
+  border-top:1px solid #e5e7eb;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  z-index:10;
+}
+.nav{text-align:center;font-size:12px;color:#344054;cursor:pointer}
 .nav span{display:block;font-size:23px;margin-bottom:3px}
+.hidden{display:none}
 </style>
 </head>
 
 <body>
 <div class="app">
 
+<!-- 1 الرئيسية -->
 <section class="page active" id="home">
-<div class="lang">🌐 العربية</div>
-<div class="logo">
-<div class="logo-ar">سهل</div>
-<div class="logo-en">SAHL</div>
-</div>
-<div class="tagline">قطع غيار سيارتك بسهولة</div>
+  <div class="lang">🌐 العربية</div>
 
-<div class="hero-img">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/2015_Chevrolet_Tahoe_LTZ_5.3L_front_6.1.18.jpg/640px-2015_Chevrolet_Tahoe_LTZ_5.3L_front_6.1.18.jpg" alt="Chevrolet Tahoe">
-</div>
+  <div class="logo">
+    <div class="logo-ar">سهل</div>
+    <div class="logo-en">SAHL</div>
+  </div>
 
-<div class="brands">
-<div class="brand"><b>Chevrolet</b>شفروليه</div>
-<div class="brand"><b>GMC</b>جي إم سي</div>
-<div class="brand"><b>Cadillac</b>كاديلاك</div>
-</div>
+  <div class="tagline">قطع غيار سيارتك بسهولة</div>
 
-<button class="btn" onclick="show('searchCar')">ابدأ الآن</button>
+  <div class="hero-img">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/2015_Chevrolet_Tahoe_LTZ_5.3L_front_6.1.18.jpg/640px-2015_Chevrolet_Tahoe_LTZ_5.3L_front_6.1.18.jpg"
+      alt="Chevrolet Tahoe"
+      onerror="this.style.display='none';document.getElementById('carFallback').style.display='block'">
+    <div id="carFallback" class="tahoe-fallback hidden">🚙</div>
+  </div>
+
+  <div class="brands">
+    <div class="brand"><b>Chevrolet</b>شفروليه</div>
+    <div class="brand"><b>GMC</b>جي إم سي</div>
+    <div class="brand"><b>Cadillac</b>كاديلاك</div>
+  </div>
+
+  <button class="btn" onclick="show('searchCar')">ابدأ الآن</button>
 </section>
 
+<!-- 2 البحث عن قطعة -->
 <section class="page" id="searchCar">
-<div class="back" onclick="show('home')">‹ رجوع</div>
-<div class="title">بحث عن قطعة</div>
+  <div class="back" onclick="show('home')">‹ رجوع</div>
+  <div class="title">بحث عن قطعة</div>
 
-<div class="steps">
-<div class="step on">1</div>
-<div class="step">2</div>
-<div class="step">3</div>
-</div>
+  <div class="steps">
+    <div class="step on">1</div>
+    <div class="step">2</div>
+    <div class="step">3</div>
+  </div>
 
-<label>أدخل رقم الشاصي (VIN)</label>
-<input placeholder="1GNSKCKC0JR000001">
+  <label>أدخل رقم الشاصي (VIN)</label>
+  <input value="1GNSKCKC0JR000001">
 
-<div class="camera">📷<br>تصوير رقم الشاصي</div>
+  <div class="camera">📷<br>تصوير رقم الشاصي</div>
 
-<button class="btn" onclick="show('vehicle')">البحث عن السيارة</button>
+  <button class="btn" onclick="show('vehicle')">البحث عن السيارة</button>
 
-<div class="divider">أو اختر السيارة يدوياً</div>
+  <div class="divider">أو اختر السيارة يدوياً</div>
 
-<select>
-<option>Chevrolet</option>
-<option>GMC</option>
-<option>Cadillac</option>
-</select><br><br>
+  <select><option>Chevrolet</option><option>GMC</option><option>Cadillac</option></select><br><br>
+  <select><option>Tahoe</option><option>Yukon</option><option>Suburban</option></select><br><br>
+  <select><option>2018</option><option>2019</option><option>2020</option></select><br><br>
+  <select><option>5.3L V8</option><option>6.2L V8</option></select>
 
-<select>
-<option>Tahoe</option>
-<option>Suburban</option>
-<option>Yukon</option>
-<option>Silverado</option>
-<option>Sierra</option>
-</select><br><br>
-
-<select>
-<option>2018</option>
-<option>2019</option>
-<option>2020</option>
-<option>2021</option>
-<option>2022</option>
-<option>2023</option>
-<option>2024</option>
-<option>2025</option>
-<option>2026</option>
-</select><br><br>
-
-<select>
-<option>5.3L V8</option>
-<option>6.2L V8</option>
-<option>3.0L Diesel</option>
-</select><br><br>
-
-<button class="btn" onclick="show('vehicle')">التالي</button>
+  <br><br>
+  <button class="btn" onclick="show('vehicle')">التالي</button>
 </section>
 
+<!-- 3 بيانات السيارة -->
 <section class="page" id="vehicle">
-<div class="back" onclick="show('searchCar')">‹ رجوع</div>
-<div class="title">بيانات السيارة</div>
+  <div class="back" onclick="show('searchCar')">‹ رجوع</div>
+  <div class="title">بيانات السيارة</div>
 
-<div class="car-card">
-<div class="hero-img">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/2015_Chevrolet_Tahoe_LTZ_5.3L_front_6.1.18.jpg/640px-2015_Chevrolet_Tahoe_LTZ_5.3L_front_6.1.18.jpg" alt="Tahoe">
-</div>
-<div class="car-name">Chevrolet Tahoe 2018</div>
-<div class="muted">5.3L V8 | LT</div>
-<div class="muted">VIN: 1GNSKCKC0JR000001</div>
-</div>
+  <div class="car-card">
+    <div style="font-size:90px">🚙</div>
+    <div class="car-name">Chevrolet Tahoe 2018</div>
+    <div class="muted">5.3L V8 | LT</div>
+    <div class="muted">VIN: 1GNSKCKC0JR000001</div>
+  </div>
 
-<br>
-<button class="btn-outline" onclick="show('searchCar')">تغيير السيارة</button>
+  <br>
+  <button class="btn-outline" onclick="show('searchCar')">تغيير السيارة</button>
 
-<h3>اختر نوع القطعة</h3>
-
-<div class="categories">
-<div class="category" onclick="show('results')"><span>⚙️</span>المحرك</div>
-<div class="category" onclick="show('results')"><span>🔌</span>الكهرباء</div>
-<div class="category" onclick="show('results')"><span>❄️</span>التبريد</div>
-<div class="category" onclick="show('results')"><span>🚗</span>الهيكل الخارجي</div>
-<div class="category" onclick="show('results')"><span>🔧</span>التعليق</div>
-<div class="category" onclick="show('results')"><span>◉</span>الفرامل</div>
-</div>
-
-<br>
-<label>أو ابحث برقم القطعة</label>
-<input placeholder="Part Number" dir="ltr">
-<button class="btn" onclick="show('results')">بحث</button>
+  <h3>اختر نوع القطعة</h3>
+  <div class="categories">
+    <div class="category" onclick="results()"><span>⚙️</span>المحرك</div>
+    <div class="category" onclick="results()"><span>🔌</span>الكهرباء</div>
+    <div class="category" onclick="results()"><span>❄️</span>التبريد</div>
+    <div class="category" onclick="results()"><span>🚗</span>الهيكل الخارجي</div>
+    <div class="category" onclick="results()"><span>🔧</span>التعليق</div>
+    <div class="category" onclick="results()"><span>◉</span>الفرامل</div>
+  </div>
 </section>
 
+<!-- 4 نتائج البحث -->
 <section class="page" id="results">
-<div class="back" onclick="show('vehicle')">‹ رجوع</div>
-<div class="title">نتائج البحث</div>
+  <div class="back" onclick="show('vehicle')">‹ رجوع</div>
+  <div class="title">نتائج البحث</div>
 
-<input value="Fuel Pump" placeholder="ابحث عن قطعة">
+  <div class="search">
+    <input value="Fuel Pump" placeholder="ابحث عن قطعة">
+  </div>
 
-<div class="tabs">
-<div class="tab active">الكل</div>
-<div class="tab">أصلي OEM</div>
-<div class="tab">تجاري</div>
-<div class="tab">مستعمل</div>
-</div>
+  <div class="tabs">
+    <div class="tab active">الكل</div>
+    <div class="tab">أصلي OEM</div>
+    <div class="tab">تجاري</div>
+    <div class="tab">مستعمل</div>
+  </div>
 
-<div class="card product" onclick="show('details')">
-<div style="font-size:58px">⛽</div>
-<div class="product-info">
-<div class="product-name">مضخة بنزين<br>Fuel Pump</div>
-<div class="muted">رقم القطعة: 13517616170</div>
-<span class="badge">OEM أصلي</span>
-<div class="price">420 AED</div>
-</div>
-</div>
+  <div class="card product" onclick="show('details')">
+    <div style="font-size:58px">⛽</div>
+    <div class="product-info">
+      <div class="product-name">مضخة بنزين<br>Fuel Pump</div>
+      <div class="muted">رقم القطعة: 13517616170</div>
+      <span class="badge">OEM أصلي</span>
+      <div class="price">420 AED</div>
+    </div>
+  </div>
 
-<div class="card product" onclick="show('details')">
-<div style="font-size:58px">⛽</div>
-<div class="product-info">
-<div class="product-name">مضخة بنزين<br>Fuel Pump</div>
-<span class="badge orange">Aftermarket تجاري</span>
-<div class="price">310 AED</div>
-</div>
-</div>
+  <div class="card product" onclick="show('details')">
+    <div style="font-size:58px">⛽</div>
+    <div class="product-info">
+      <div class="product-name">مضخة بنزين<br>Fuel Pump</div>
+      <div class="muted">رقم القطعة: 13517616170</div>
+      <span class="badge orange">Aftermarket تجاري</span>
+      <div class="price">310 AED</div>
+    </div>
+  </div>
 
-<div class="card product" onclick="show('details')">
-<div style="font-size:58px">⛽</div>
-<div class="product-info">
-<div class="product-name">مضخة بنزين<br>Fuel Pump</div>
-<span class="badge gray">Used مستعمل</span>
-<div class="price">220 AED</div>
-</div>
-</div>
+  <div class="card product" onclick="show('details')">
+    <div style="font-size:58px">⛽</div>
+    <div class="product-info">
+      <div class="product-name">مضخة بنزين<br>Fuel Pump</div>
+      <span class="badge gray">Used مستعمل</span>
+      <div class="price">220 AED</div>
+    </div>
+  </div>
 </section>
 
+<!-- 5 تفاصيل القطعة -->
 <section class="page" id="details">
-<div class="back" onclick="show('results')">‹ رجوع</div>
-<div class="title">تفاصيل القطعة</div>
+  <div class="back" onclick="show('results')">‹ رجوع</div>
+  <div class="title">تفاصيل القطعة</div>
 
-<div style="text-align:center;font-size:145px">⛽</div>
+  <div class="big-product">
+    <div style="font-size:145px">⛽</div>
+  </div>
+  <div class="dots">●•••</div>
 
-<h3>مضخة بنزين | Fuel Pump</h3>
-<div class="muted">رقم القطعة: 13517616170</div>
-<div class="muted">الماركة: AC Delco (OEM)</div>
-<span class="badge">OEM أصلي</span>
-<div class="price" style="font-size:28px;margin:18px 0">420 AED</div>
+  <h3>مضخة بنزين | Fuel Pump</h3>
+  <div class="muted">رقم القطعة: 13517616170</div>
+  <div class="muted">الماركة: AC Delco (OEM)</div>
+  <span class="badge">OEM أصلي</span>
 
-<button class="btn" onclick="show('suppliers')">إضافة إلى الطلب</button>
+  <div class="price" style="font-size:28px;margin:18px 0">420 AED</div>
+
+  <button class="btn" onclick="show('suppliers')">إضافة إلى الطلب</button>
 </section>
 
+<!-- 6 الموردون -->
 <section class="page" id="suppliers">
-<div class="back" onclick="show('details')">‹ رجوع</div>
-<div class="title">الموردين المتاحين</div>
+  <div class="back" onclick="show('details')">‹ رجوع</div>
+  <div class="title">الموردين المتاحين</div>
 
-<div class="card supplier">
-<div class="supplier-icon">🏬</div>
-<div>
-<b>مورد دبي التجريبي 🇦🇪</b><br>
-<span class="badge">OEM أصلي</span>
-<div class="price">420 AED</div>
-<div class="muted">التوصيل: 1–2 يوم</div>
-</div>
-<input class="radio" type="radio" name="supplier" checked>
-</div>
+  <div class="card supplier">
+    <div class="supplier-icon">🏬</div>
+    <div>
+      <b>مورد دبي التجريبي 🇦🇪</b><br>
+      <span class="badge">OEM أصلي</span>
+      <div class="price">420 AED</div>
+      <div class="muted">التوصيل: 1–2 يوم</div>
+    </div>
+    <input class="radio" type="radio" name="supplier" checked>
+  </div>
 
-<div class="card supplier">
-<div class="supplier-icon">🏬</div>
-<div>
-<b>مورد الشارقة التجريبي 🇦🇪</b><br>
-<span class="badge orange">Aftermarket</span>
-<div class="price">310 AED</div>
-<div class="muted">التوصيل: 2–3 أيام</div>
-</div>
-<input class="radio" type="radio" name="supplier">
-</div>
+  <div class="card supplier">
+    <div class="supplier-icon">🏬</div>
+    <div>
+      <b>مورد الشارقة التجريبي 🇦🇪</b><br>
+      <span class="badge orange">Aftermarket</span>
+      <div class="price">310 AED</div>
+      <div class="muted">التوصيل: 2–3 أيام</div>
+    </div>
+    <input class="radio" type="radio" name="supplier">
+  </div>
 
-<div class="card supplier">
-<div class="supplier-icon">🏬</div>
-<div>
-<b>مورد عمان التجريبي 🇴🇲</b><br>
-<span class="badge gray">Used مستعمل</span>
-<div class="price">220 AED</div>
-<div class="muted">التوصيل: 1–2 يوم</div>
-</div>
-<input class="radio" type="radio" name="supplier">
-</div>
+  <div class="card supplier">
+    <div class="supplier-icon">🏬</div>
+    <div>
+      <b>مورد عمان التجريبي 🇴🇲</b><br>
+      <span class="badge gray">Used مستعمل</span>
+      <div class="price">220 AED</div>
+      <div class="muted">التوصيل: 1–2 يوم</div>
+    </div>
+    <input class="radio" type="radio" name="supplier">
+  </div>
 
-<button class="btn" onclick="show('shipping')">متابعة</button>
+  <button class="btn" onclick="show('shipping')">متابعة</button>
 </section>
 
+<!-- 7 اللوجستيات والشحن -->
 <section class="page" id="shipping">
-<div class="back" onclick="show('suppliers')">‹ رجوع</div>
-<div class="title">اللوجستيات وخيارات الشحن</div>
+  <div class="back" onclick="show('suppliers')">‹ رجوع</div>
+  <div class="title">خيارات الشحن</div>
 
-<div class="card shipping">
-<div class="shipping-icon">📍</div>
-<div>
-<b>عنوان التسليم</b>
-<div class="muted">مسقط، عُمان 🇴🇲</div>
-</div>
-</div>
+  <div class="card shipping">
+    <div class="shipping-icon">🌐</div>
+    <div>
+      <b>العنوان</b>
+      <div class="muted">مسقط، عُمان 🇴🇲</div>
+    </div>
+  </div>
 
-<div class="card shipping">
-<div class="shipping-icon">🚚</div>
-<div style="flex:1">
-<b>شحن عادي</b>
-<div class="price">35 AED</div>
-<div class="muted">1–2 يوم عمل</div>
-</div>
-<input class="radio" type="radio" name="shipping" checked>
-</div>
+  <div class="card shipping">
+    <div class="shipping-icon">🚚</div>
+    <div style="flex:1">
+      <b>شحن عادي</b>
+      <div class="price">35 AED</div>
+      <div class="muted">1–2 يوم عمل</div>
+    </div>
+    <input class="radio" type="radio" name="shipping" checked>
+  </div>
 
-<div class="card shipping">
-<div class="shipping-icon">⚡</div>
-<div style="flex:1">
-<b>شحن سريع</b>
-<div class="price">69 AED</div>
-<div class="muted">نفس اليوم / اليوم التالي</div>
-</div>
-<input class="radio" type="radio" name="shipping">
-</div>
+  <div class="card shipping">
+    <div class="shipping-icon">🚚</div>
+    <div style="flex:1">
+      <b>شحن سريع</b>
+      <div class="price">69 AED</div>
+      <div class="muted">نفس اليوم</div>
+    </div>
+    <input class="radio" type="radio" name="shipping">
+  </div>
 
-<h3>الشحن الدولي</h3>
+  <label>ملاحظات للمورد (اختياري)</label>
+  <textarea placeholder="مثلاً: تأكد من رقم القطعة قبل الإرسال"></textarea>
 
-<div class="card shipping">
-<div class="shipping-icon">DHL</div>
-<div><b>DHL Express</b><div class="muted">2–4 أيام</div></div>
-</div>
-
-<div class="card shipping">
-<div class="shipping-icon">FX</div>
-<div><b>FedEx</b><div class="muted">3–5 أيام</div></div>
-</div>
-
-<div class="card shipping">
-<div class="shipping-icon">UPS</div>
-<div><b>UPS</b><div class="muted">3–6 أيام</div></div>
-</div>
-
-<label>ملاحظات للمورد (اختياري)</label>
-<textarea placeholder="مثلاً: تأكد من رقم القطعة وصوّرها قبل الإرسال"></textarea>
-
-<br>
-<button class="btn" onclick="show('review')">متابعة</button>
+  <br>
+  <button class="btn" onclick="show('review')">متابعة</button>
 </section>
 
+<!-- 8 مراجعة الطلب -->
 <section class="page" id="review">
-<div class="back" onclick="show('shipping')">‹ رجوع</div>
-<div class="title">مراجعة الطلب</div>
+  <div class="back" onclick="show('shipping')">‹ رجوع</div>
+  <div class="title">مراجعة الطلب</div>
 
-<div class="card product">
-<div style="font-size:58px">⛽</div>
-<div>
-<b>مضخة بنزين | Fuel Pump</b>
-<div class="muted">13517616170</div>
-<span class="badge">OEM أصلي</span>
-<div class="price">420 AED</div>
-</div>
-</div>
+  <div class="card product">
+    <div style="font-size:58px">⛽</div>
+    <div>
+      <b>مضخة بنزين | Fuel Pump</b>
+      <div class="muted">13517616170</div>
+      <div class="price">420 AED</div>
+    </div>
+  </div>
 
-<div class="review-row"><span>المورد</span><b>مورد دبي 🇦🇪</b></div>
-<div class="review-row"><span>الشحن</span><b>35 AED</b></div>
-<div class="review-row"><span>العنوان</span><b>مسقط، عُمان 🇴🇲</b></div>
-<div class="review-row"><span>سعر القطعة</span><b>420 AED</b></div>
-<div class="review-row total"><span>المجموع</span><b>455 AED</b></div>
+  <div class="review-row"><span>المورد</span><b>مورد دبي التجريبي 🇦🇪</b></div>
+  <div class="review-row"><span>الشحن</span><b>35 AED</b></div>
+  <div class="review-row"><span>العنوان</span><b>مسقط، عُمان 🇴🇲</b></div>
+  <div class="review-row"><span>سعر القطعة</span><b>420 AED</b></div>
+  <div class="review-row total"><span>المجموع</span><b>455 AED</b></div>
 
-<br>
-<button class="btn" onclick="show('payment')">إتمام الدفع التجريبي</button>
+  <br>
+  <button class="btn" onclick="show('payment')">إتمام الدفع التجريبي</button>
 </section>
 
+<!-- 9 الدفع -->
 <section class="page" id="payment">
-<div class="back" onclick="show('review')">‹ رجوع</div>
-<div class="title">الدفع التجريبي</div>
+  <div class="back" onclick="show('review')">‹ رجوع</div>
+  <div class="title">الدفع التجريبي</div>
 
-<div class="payment-methods">
-<div class="pay selected">💳<br>بطاقة بنكية</div>
-<div class="pay">Pay<br>Apple Pay</div>
-<div class="pay">👛<br>محفظة</div>
-</div>
+  <div class="payment-methods">
+    <div class="pay selected">💳<br>بطاقة بنكية</div>
+    <div class="pay">Pay<br>Apple Pay</div>
+    <div class="pay">👛<br>محفظة</div>
+  </div>
 
-<label>رقم البطاقة</label>
-<input dir="ltr" placeholder="1234 5678 9012 3456">
+  <label>رقم البطاقة</label>
+  <input placeholder="1234 5678 9012 3456">
 
-<div style="display:flex;gap:10px">
-<div style="flex:1">
-<label>تاريخ الانتهاء</label>
-<input placeholder="MM/YY">
-</div>
+  <div style="display:flex;gap:10px">
+    <div style="flex:1">
+      <label>تاريخ الانتهاء</label>
+      <input placeholder="MM/YY">
+    </div>
+    <div style="flex:1">
+      <label>CVV</label>
+      <input placeholder="123">
+    </div>
+  </div>
 
-<div style="flex:1">
-<label>CVV</label>
-<input placeholder="123">
-</div>
-</div>
+  <label>اسم حامل البطاقة</label>
+  <input value="AHMED ALI">
 
-<label>اسم حامل البطاقة</label>
-<input placeholder="AHMED ALI">
-
-<br><br>
-<button class="btn" onclick="show('status')">دفع 455 AED</button>
+  <br><br>
+  <button class="btn" onclick="show('status')">دفع 455 AED</button>
 </section>
 
+<!-- 10 حالة الطلب -->
 <section class="page" id="status">
-<div class="back" onclick="show('home')">‹ الرئيسية</div>
-<div class="title">الطلب قيد المعالجة</div>
+  <div class="back" onclick="show('home')">‹ الرئيسية</div>
+  <div class="title">الطلب قيد المعالجة</div>
 
-<div class="success">
-<div class="check">✓</div>
-<h2>تم تأكيد الطلب التجريبي</h2>
-<div class="muted">رقم الطلب: SAHL-DEMO-1001</div>
-</div>
+  <div class="success">
+    <div class="check">✓</div>
+    <h2>تم تأكيد الطلب التجريبي</h2>
+    <div class="muted">رقم الطلب: SAHL-DEMO-1001</div>
+  </div>
 
-<div class="timeline">
-<div><b>✓</b>تم الدفع</div>
-<div><b>✓</b>تجهيز القطعة</div>
-<div class="current"><b>●</b>صورة القطعة</div>
-<div><b>○</b>تم الشحن</div>
-<div><b>○</b>تم التسليم</div>
-</div>
+  <div class="timeline">
+    <div><b>✓</b>تم الدفع</div>
+    <div><b>✓</b>تجهيز القطعة</div>
+    <div class="current"><b>●</b>صورة القطعة</div>
+    <div><b>○</b>تم الشحن</div>
+    <div><b>○</b>تم التسليم</div>
+  </div>
 
-<div class="notice">
-<b>بانتظار صورة القطعة من المورد</b>
-<br><br>
-سيقوم المورد بإرسال صورة القطعة الفعلية قبل الشحن حتى تتأكد منها وتوافق عليها.
-</div>
+  <div class="notice">
+    <b>بانتظار صورة القطعة من المورد</b><br><br>
+    سيقوم المورد بإرسال صورة القطعة الفعلية قبل الشحن لمراجعتها والموافقة عليها.
+  </div>
 
-<div class="card" style="text-align:center">
-<div style="font-size:100px">⛽</div>
-<div class="muted">صورة القطعة من المورد تظهر هنا</div>
-</div>
+  <div class="card" style="text-align:center">
+    <div style="font-size:100px">⛽</div>
+  </div>
 
-<div class="approval">
-<button class="btn approve">✓ موافقة على القطعة</button>
-<button class="btn reject">✕ رفض القطعة</button>
-</div>
-
-<br>
-
-<div class="card">
-<b>🚚 تتبع الشحنة</b>
-<p class="muted">بعد موافقتك على صورة القطعة سيظهر رقم التتبع وحالة الشحنة هنا.</p>
-</div>
+  <div class="approval">
+    <button class="btn approve">✓ موافقة</button>
+    <button class="btn reject">✕ رفض</button>
+  </div>
 </section>
 
+<!-- شريط التنقل -->
 <div class="bottom">
-<div class="nav" onclick="show('home')"><span>⌂</span>الرئيسية</div>
-<div class="nav" onclick="show('searchCar')"><span>⌕</span>البحث</div>
-<div class="nav" onclick="show('status')"><span>♡</span>طلباتي</div>
-<div class="nav"><span>♙</span>حسابي</div>
+  <div class="nav" onclick="show('home')"><span>⌂</span>الرئيسية</div>
+  <div class="nav" onclick="show('searchCar')"><span>⌕</span>البحث</div>
+  <div class="nav" onclick="show('status')"><span>♡</span>طلباتي</div>
+  <div class="nav"><span>♙</span>حسابي</div>
 </div>
 
 </div>
 
 <script>
 function show(id){
-  document.querySelectorAll('.page').forEach(function(page){
-    page.classList.remove('active');
-  });
-
-  var page=document.getElementById(id);
-
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const page=document.getElementById(id);
   if(page){
     page.classList.add('active');
-    window.scrollTo(0,0);
+    window.scrollTo({top:0,behavior:'smooth'});
   }
 }
+function results(){
+  show('results');
+}
 </script>
-
 </body>
 </html>
